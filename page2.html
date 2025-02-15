@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Layout</title>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;  
+            color: #333;
+            text-align: center;
+            background-image: url('images/image2.jpg');
+            background-size: cover; 
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        /* Lightening the background by adding a semi-transparent white overlay */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.5);
+            z-index: -1;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px 10px;
+            max-width: 700px;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+
+        .content {
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            position: relative;
+        }
+
+        .content h2 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .examples {
+            background-color: #f0f0f0;
+            padding: 15px;
+            max-width: 500px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .examples-text {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .examples-text p {
+            font-size: 1em;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .examples-text img {
+            max-width: 40%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .advice {
+            background-color: #007BFF;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-size: 1.2em;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        footer h1 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        /* Styling for the "Back to Index" button */
+        .back-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>NEITHER = NINGUNO</h1>
+</header>
+
+<div class="content">
+    <h2> Neither book is interesting</h2>
+
+    <div class="examples-text">
+        <div class="examples">
+            <p>1. Neither of them is interesting.</p>
+            <p>2. I have not read either of those books.</p>
+            <p>3. I have read neither of those books.</p>
+            <p>4. I don't like either of them.</p>     
+            <p>5. I like neither of them.</p>
+        </div>
+        <img src="images/image1.jpg" alt="Web Design Example Image">
+    </div>
+
+    <div class="advice">
+        <p>Advice: </p>
+    </div>
+
+    <!-- Back to Index Button using JavaScript -->
+    <button class="back-button" onclick="goBack()">Back to Index</button>
+</div>
+
+<footer>
+    <h1>Footer Section</h1>
+    <p>This is the footer and this is the purpose: The footer provides additional information such as copyright or credits, placed at the bottom of the page.</p>
+</footer>
+
+<script>
+    // JavaScript function to go back to the index page
+    function goBack() {
+        window.location.href = 'index.html';  // Redirect to 'index.html'
+    }
+</script>
+
+</body>
+</html>

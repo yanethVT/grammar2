@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Layout</title>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;  
+            color: #333;  
+            text-align: center;
+            background-image: url('images/image2.jpg'); 
+            background-size: cover; 
+            background-position: center center;  
+            background-attachment: fixed;  
+            background-repeat: no-repeat;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.5);  
+            z-index: -1;
+        }
+
+        header {
+            background-color: #007BFF;  
+            color: white;
+            padding: 20px 10px;  
+            max-width: 700px;  
+            margin: 0 auto;  
+            border-radius: 8px; 
+        }
+
+        .content {
+            max-width: 700px;  
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;  
+            border-radius: 8px;  
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;  
+        }
+
+        .content h2 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: #444;  
+        }
+
+        .examples {
+            background-color: #f0f0f0;  
+            padding: 15px;
+            max-width: 500px; 
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .examples-text {
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+        }
+
+        .examples-text p {
+            font-size: 1em;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .examples-text img {
+            max-width: 40%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .advice {
+            background-color: #007BFF;  
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-size: 1.2em;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        footer h1 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        /* Add right-side navigation buttons */
+        .nav-buttons {
+            position: fixed;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 10; /* Keep buttons on top of content */
+        }
+
+        .nav-buttons a {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px 0;
+            display: block;
+            font-size: 1.1em;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .nav-buttons a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+            .examples-text {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .examples-text img {
+                max-width: 100%;
+                margin-top: 10px;
+            }
+
+            .content {
+                padding: 15px;
+                margin: 15px;
+            }
+
+            header {
+                padding: 15px 10px;
+            }
+
+            .nav-buttons {
+                top: 90%;  /* Move buttons down on smaller screens */
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Grammar_flashcards</h1>
+</header>
+
+<div class="content">
+    <h2> lets improve every day?</h2>
+
+    <div class="examples-text">
+        <div class="examples">
+            <p>1. EXAMPLE 1.</p>
+            <p>2. EXAMPLE 2.</p>
+            <p>3. EXAMPLE 3.</p>
+            <p>4. EXAMPLE 4.</p>     
+            <p>5. EXAMPLE 5.</p>
+        </div>
+        <img src="images/image1.jpg" alt="Web Design Example Image">
+    </div>
+
+    <div class="advice">
+        <p>Advice: </p>
+    </div>
+
+</div>
+
+<footer>
+    <h1>Footer Section</h1>
+    <p>This is the footer and this is the purpose: The footer provides additional information such as copyright or credits, placed at the bottom of the page.</p>
+</footer>
+
+<!-- Navigation Buttons -->
+<div class="nav-buttons">
+    <a href="page1.html">Page 1</a>
+    <a href="page2.html">Page 2</a>
+    <a href="page3.html">Page 3</a>
+    <a href="page4.html">Page 4</a>
+</div>
+
+</body>
+</html>
